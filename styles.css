@@ -1,0 +1,311 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  background-color: white;
+  font-family: 'Open Sans', "Font Awesome 5 Free", sans-serif;
+}
+
+.medium-gray {
+  color: #9ca3ae;
+}
+
+.light-gray {
+  color: #b3bac3;
+}
+
+.side {
+  background-color: #374050;
+  color: #a2abbc;
+}
+
+.user-picture {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 100px;
+  margin: 15px auto 5px auto;
+  display: block;
+}
+
+.user-name {
+  text-align: center;
+}
+
+.main-options, .admin-options, .categories {
+  border-top: 2px solid #2e3645;
+}
+
+.subtitle {
+  padding-left: 22px;
+  color: #727b84;
+}
+
+.side-bar-menus {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  border-left: 3px solid transparent;
+}
+
+li:hover {
+  color: white;
+  border-left: 3px solid #47a3f2;
+  background-color: #313948;
+}
+
+.sidebar-icons {
+  padding: 10px 8px 10px 20px;
+}
+
+label {
+  padding-left: 8px;
+  padding-top: 0;
+}
+
+
+.main {
+
+}
+
+.search-area{
+  display: grid;
+  border-bottom: 1px solid #d3dae1;
+  grid-template-columns: 65px 1fr 65px 65px 65px;
+}
+
+.square-btns {
+    background: none;
+    border: #d3dae1;
+    border-right: 1px solid #d3dae1;
+    font-size: 20px;
+    text-align: center;
+    height: 65px;
+  color: #7d8593;
+}
+
+.square-btns:hover{
+  background-color: #47a3f2;
+  color: white;
+}
+
+
+.fa-caret-left {
+  color: #47a3f2;
+  padding-right: 2px;
+}
+
+.fa-align-justify {
+  padding-right: 10px;
+}
+
+.fa-search {
+  font-size: 20px; 
+}
+
+.left-border {
+  border-left: 1px solid #d3dae1;
+}
+
+
+.search-bar {
+  font-size: 18px;
+  padding-left: 10px;
+  border: none;
+}
+
+.page-header {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+h1 {
+  color: #4e515d;
+  margin: 0;
+}
+
+.light-title {
+  font-weight: 400;
+}
+
+.job-location {
+  margin-top: 8px;
+  color: #b5bac2;
+}
+
+a {
+  color: #47a3f2;
+  text-decoration: none;
+}
+
+.open-button {
+  color: #7d8593;
+  border-radius: 20px;
+  padding: 8px 11px 8px 11px;
+}
+
+.open-button:hover {
+  background-color: #47a3f2;
+  color: white;
+}
+
+.open-dot {
+  color: green;
+}
+
+.circle-btn {
+  border-radius: 50%;
+  padding: 7px 11px
+}
+
+.circle-btn:hover {
+  background-color: #47a3f2;
+  color: white;
+}
+
+.page-nav-list {
+  margin-bottom: 18px;
+  padding-right: 40px;
+}
+
+.page-nav-items {
+  display: inline;
+  border-left: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 13px;
+  margin-right: 40px;
+  color: #9ca3ae;
+  font-size: 13px
+}
+
+.page-nav-items:hover{
+  color: #4e515d;
+  background-color: white;
+  font-weight: bold;
+  border-left: none;
+  border-bottom : 3px solid #47a3f2;
+}
+
+.chart-area {
+  border-top: 2px solid #d3dae1;
+  background-color: #edf2f6;
+  display: grid;
+  grid-template-columns: 35rem 1fr;
+}
+
+.circle-graph-area {
+
+}
+
+.bar-graph-area {
+ 
+}
+
+.job-area {
+  background-color: #edf2f6;
+  display: grid;
+  grid-template-columns: 800px 1fr;
+}
+
+table {
+  color: #717d93;
+  margin: 40px;
+  border-collapse: collapse;
+  background-color: white;
+  table-layout: auto;
+}
+
+thead {
+  color: white;
+  background-color: #717d93;
+  font-size: 14px;
+}
+
+th {
+  padding: 20px;
+  text-align: left;
+}
+
+td {
+ padding: 20px;
+ text-align: left;
+ font-size: 13px;
+ border-bottom: 1px solid #d3dae1;
+}
+
+.social-media-area {
+  margin: 40px;
+  color: #5b6677;
+}
+
+.social-btns {
+  display: block;
+  margin: 0 auto 15px auto;
+  color: white;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: auto;
+  text-align: left;
+}
+
+.fa-facebook, .fa-twitter, .fa-linkedin {
+  padding-right: 70px;
+}
+
+.facebook-btn {
+  background-color: #5070bc;
+}
+
+.twitter-btn {
+  background-color: #47a8e8;
+}
+
+.linkedin-btn {
+  background-color: #3481b8;
+}
+
+.button-widget-area, .upload-resume-area {
+  border-top: 2px solid #d3dae1;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.link-to-job {
+  padding-bottom: 30px;
+}
+.input-add-on {
+  display: flex;
+}
+
+.link-for-widget, .link-for-job {
+  flex: 1;
+  background-color: white;
+  padding: 10px;
+}
+
+.copy-widget-btn, .copy-link-btn {
+  background-color: #67b8bf;
+  color: white;
+}
+
+.upload-resume-btn {
+  background-color: white;
+  width: 100%;
+} 
+
+.social-subtitles {
+  color: #5b6677;
+  font-weight: bold;
+}
+
+
