@@ -7,7 +7,6 @@ body {
   grid-template-columns: 210px 1fr;
   background-color: white;
   font-family: 'Open Sans', "Font Awesome 5 Free", sans-serif;
-  max-width: 1410px;
   margin: auto;
 }
 
@@ -275,7 +274,7 @@ a {
   color: white;
 }
 
-/*COLLAPSE BAR STYLING*/
+/*COLLAPSE BAR STYLING AREA*/
 .collapse-bar {
   background-color: #edf2f6;
   padding: 30px 0 0 40px
