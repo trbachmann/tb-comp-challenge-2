@@ -16,7 +16,7 @@
       <p class="user-name">Tiffany Bachmann <i class="fas fa-caret-down"></i></p>
     </div>
     <div class="main-options">
-      <p class="subtitle">Main</p>
+      <p class="side-br-subtitles">Main</p>
       <ul class=side-bar-menus>
         <li><i class="fas fa-home sidebar-icons"></i>HOME</li>
         <li><i class="fas fa-briefcase sidebar-icons"></i> JOBS</li>
@@ -26,7 +26,7 @@
       </ul>
     </div>
     <div class="admin-options">
-      <p class="subtitle">Admin</p>
+      <p class="side-br-subtitles">Admin</p>
       <ul class=side-bar-menus>
         <li><i class="fas fa-user-friends sidebar-icons"></i>USERS</li>
         <li><i class="fas fa-map-marker-alt sidebar-icons"></i> LOCATIONS</li>
@@ -36,7 +36,7 @@
       </ul>
     </div>
     <div class="categories">
-      <p class="subtitle">Categories</p>
+      <p class="side-br-subtitles">Categories</p>
       <ul class=side-bar-menus>
         <li class="sidebar-icons">
           <input class="checkboxes administrative" type="checkbox" id="admin">
@@ -71,9 +71,9 @@
         <p class="job-location"><i class="fas fa-map-marker-alt"></i>  West Palm Beach, FL ∙ <a href="https://example.com">Preview this post</a></p> 
       </div>      
       <div class="page-buttons">
-        <button class="open-button"><span class="open-dot">●</span> OPEN</button>
+        <button class="open-btn"><span class="open-btn-dot">●</span> OPEN</button>
         <button class="circle-btn"><i class="fas fa-bookmark"></i></button>
-        <button class="circle-btn"><i class="fas fa-pencil-alt"></i></button>
+        <button class="circle-btn pencil-btn"><i class="fas fa-pencil-alt"></i></button>
         <button class="circle-btn"><i class="fas fa-trash-alt"></i></button>
       </div>
     </section>
@@ -86,16 +86,71 @@
         <li class="page-nav-items">BROADCAST</li>
         <li class="page-nav-items">NOTIFICATIONS</li>
       </ul>
-    <section class="chart-area">
-      <section class="circle-graph-area">
-        Circles go here
+    <section class="charts-area">
+      <section class="circle-graphs-container">
+        <div class="applicant-chart">
+          <svg viewBox="0 0 36 36">
+            <path class="outer-applicant-circ"
+              d="M18 33.9155
+                a 15.9155 15.9155 0 0 1 0 -31.831
+                a 15.9155 15.9155 0 0 1 0 31.831"
+            />
+            <path class="inner-applicant-circ"
+              stroke-dasharray="80, 100"
+              d="M18 33.9155
+                a 15.9155 15.9155 0 0 1 0 -31.831
+                a 15.9155 15.9155 0 0 1 0 31.831"
+            />
+            <text x="8" y="19.35" class="graph-numbers">3,154</text>
+            <text x="10" y="24.35" class="graph-text">APPLICANTS</text>
+          </svg>
+        </div>
+        <div class="interview-chart">
+          <svg viewBox="0 0 36 36">
+            <path class="outer-interview-circ"
+              d="M18 33.9155
+                a 15.9155 15.9155 0 0 1 0 -31.831
+                a 15.9155 15.9155 0 0 1 0 31.831"
+            />
+            <path class="inner-interview-circ"
+              stroke-dasharray="40, 100"
+              d="M18 33.9155
+                a 15.9155 15.9155 0 0 1 0 -31.831
+                a 15.9155 15.9155 0 0 1 0 31.831"
+            />
+            <text x="8" y="19.35" class="graph-numbers">1,546</text>
+            <text x="11" y="24.35" class="graph-text">INTERVIEWS</text>
+          </svg>
+        </div>
+        <div class="forward-chart">
+          <svg viewBox="0 0 36 36">
+            <path class="outer-forward-circ"
+              d="M18 33.9155
+                a 15.9155 15.9155 0 0 1 0 -31.831
+                a 15.9155 15.9155 0 0 1 0 31.831"
+            />
+            <path class="inner-forward-circ"
+              stroke-dasharray="20, 100"
+              d="M18 33.9155
+                a 15.9155 15.9155 0 0 1 0 -31.831
+                a 15.9155 15.9155 0 0 1 0 31.831"
+            />
+            <text x="11" y="19.35" class="graph-numbers">912</text>
+            <text x="11" y="24.35" class="graph-text">FORWARDS</text>
+          </svg>
+        </div>
       </section>
       <section class="bar-graph-area">
-        Bar graph goes here
+        <img class="bars" src="./images/applicant-graph-375.png" alt="Graph showing applicants reciecved per day">
       </section>
-      <button>TOTALS * Out of 5,346 views</button>
-      <button>APPLICANTS/DAY</button>
+      <button class="total-btn">TOTALS •  Out of 5,231 views</button>
+      <button class="applicant-btn">APPLICANTS/DAY</button>
     </section>
+    <div class="collapse-bar">
+      <hr class="collapse-lines">
+      <i class="fas fa-chevron-circle-up"></i>
+      <hr class="collapse-lines">
+    </div>
     <section class="job-area">
       <section class="job-description">
         <table>
@@ -147,17 +202,17 @@
         <button class="social-btns linkedin-btn"><i class="fab fa-linkedin"></i> Post to Linkedin</button>
         <section class="link-to-job">
           <p class="social-subtitles"><i class="fas fa-globe-americas"></i> Link to this job</p>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <div class="input-add-on">
-            <input class="link-for-job" type="text" placeholder="https://loemipsum.com/thisjob">
+            <input class="job-link" type="text" placeholder="https://loemipsum.com/thisjob...">
             <button class="copy-link-btn">Copy</button>
           </div>
         </section>
         <section class="button-widget-area">
           <p class="social-subtitles"><i class="fas fa-window-maximize"></i> Use the Button Widghet</p>
-          <p>This widgetembeds the buttons for sharing the job for submitting a resume on your website</p>
+          <p>This widget embeds the buttons for sharing the job for submitting a resume on your website</p>
           <div class="input-add-on">
-            <input class="link-for-widget" type="text" placeholder="<script type=javascrip">
+            <input class="link-for-widget" type="text" placeholder="<script type=text/javascript s...">
             <button class="copy-widget-btn">Copy</button>
           </div>
         </section>
@@ -165,7 +220,9 @@
           <p class="social-subtitles"><i class="fas fa-location-arrow"></i> Upload Resume By Email</p>
           <p>You can automatically upload multiples resumes to this job by emailing the address below.</p>
           <!-- <button class="upload-resume-btn">tomtizzy@gmail.com</button> -->
-          <input class="upload-resume-btn" type="text" placeholder="tomtizzy@gmail.com">
+          <div class="input-add-on">
+            <input class="upload-resume-btn" type="text" placeholder="tomtizzy@gmail.com">
+          </div>
         </section>
       </section>
     </section>
