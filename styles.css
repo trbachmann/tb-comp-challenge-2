@@ -163,6 +163,7 @@ a:hover {
 
 .circle-btn {
   border-radius: 55%;
+  color: #7d8593;
   padding: 7px 11px
 }
 
@@ -302,6 +303,10 @@ a:hover {
   margin: auto;
 }
 
+.applicant-btn {
+  width: 150px;
+}
+
 .total-btn:hover, .applicant-btn:hover  {
   background-color: #47a3f2;
   color: white;
@@ -314,15 +319,23 @@ a:hover {
 }
 
 .collapse-lines {
-  display: inline-block;
-  margin: 0 auto 0 auto;
-  width: 45%;
   color: #d3dae1;
+  display: inline-block;
+  margin: 8px auto 6px auto;
+  width: 46.5%;
 }
 
 .fa-chevron-circle-up {
-  color: #d3dae1;
+  color: #9ca3ae;
+  font-size: 24px;
+  padding-top: 2px;
+  padding-bottom: 5px;
 }
+
+.fa-chevron-circle-up:hover  {
+  color: #47a3f2;
+}
+
 /*JOB TABLE AREA STYLING*/
 .job-area {
   background-color: #edf2f6;
@@ -335,7 +348,15 @@ table {
   background-color: white;
   color: #717d93;
   margin: 40px;
-  table-layout: auto;
+  table-layout: fixed;
+}
+
+.job-table th{
+  width: 30%;
+}
+
+tbody {
+  line-height: 1.5;
 }
 
 thead {
@@ -354,14 +375,16 @@ th {
 td {
  border-bottom: 1px solid #d3dae1;
  font-size: 14px;
- padding: 20px 20px 20px 30px;
+ padding: 30px;
  /*padding: 20px 0 20px 0px;*/
  text-align: left;
 }
 
+.edit-table-sectn {
+  border: none;
+}
 .table-subtitles {
   padding: 20px 20px 20px 30px;
-  /*padding: 25px 0 25px 0;*/
   font-weight: bold;
 }
 
@@ -415,6 +438,10 @@ td {
   background-color: #3481b8;
 }
 
+.facebook-btn:hover, .twitter-btn:hover, .linkedin-btn:hover {
+  font-weight: bold;
+}
+
 .button-widget-area, .upload-resume-area {
   border-top: 2px solid #d3dae1;
   padding-top: 20px;
@@ -422,6 +449,7 @@ td {
 }
 
 .link-to-job {
+  margin-top: 40px;
   padding-bottom: 30px;
 }
 
@@ -441,8 +469,7 @@ td {
 }
 
 .copy-widget-btn:hover, .copy-link-btn:hover {
-  background-color: white;
-  color: #67b8bf;
+  font-weight: bold;
 }
 
 .upload-resume-btn {
