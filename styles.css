@@ -6,7 +6,7 @@ body {
   display: grid;
   grid-template-columns: 210px 1fr;
   background-color: white;
-  font-family: 'Open Sans', "Font Awesome 5 Free", sans-serif;
+  font-family: 'Open Sans', 'Font Awesome\ 5 Free', sans-serif;
   margin: auto;
 }
 
@@ -103,11 +103,16 @@ label {
 
 .search-bar {
   border: none; 
-  font-size: 18px;
-  padding-left: 10px;
+  font-size: 16px;
+  padding-left: 24px;
+  font-weight: 600;
 }
 
-/*PAGE HEARD STYLING (where CSR and location is)*/
+.search-bar:hover{
+  border: .5px solid #47a3f2;
+}
+
+/*PAGE HEAD STYLING (where CSR and location is)*/
 .page-header {
   align-items: center;
   border-top: 1px solid #d3dae1;
@@ -133,6 +138,10 @@ h1 {
 a {
   color: #47a3f2;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .open-btn {
@@ -222,6 +231,12 @@ a {
   stroke-width: 1.7;
   stroke: #67b8bf;
   stroke-linecap: round;
+  animation: applicant-animate 2s ease-in;
+}
+
+@keyframes applicant-animate {
+  0% {stroke-dasharray: 0, 100}
+  100% {stroke-dasharray: 80, 100 }
 }
 
 .inner-interview-circ {
@@ -229,6 +244,12 @@ a {
   stroke-width: 1.7;
   stroke: #47a4f3;
   stroke-linecap: round;
+  animation: interview-animate 2s ease-in;
+}
+
+@keyframes interview-animate {
+  0% {stroke-dasharray: 0, 100}
+  100% {stroke-dasharray: 40, 100 }
 }
 
 .inner-forward-circ{
@@ -236,6 +257,12 @@ a {
   stroke-width: 1.7;
   stroke: #a46eab;
   stroke-linecap: round;
+  animation: forward-circ-animate 2s ease-in;  
+}
+
+@keyframes forward-circ-animate {
+  0% {stroke-dasharray: 0, 100}
+  100% {stroke-dasharray: 20, 100 }
 }
 
 .graph-text {
@@ -257,6 +284,12 @@ a {
 
 .bars{
   margin: auto;
+  animation: animate-bar-graph 2s ease-in;  
+}
+
+@keyframes animate-bar-graph {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .total-btn, .applicant-btn {
@@ -294,7 +327,7 @@ a {
 .job-area {
   background-color: #edf2f6;
   display: grid;
-  grid-template-columns: 800px 1fr;
+  grid-template-columns: 1fr 400px;
 }
 
 table {
@@ -312,15 +345,39 @@ thead {
 }
 
 th {
-  padding: 5px;
+  font-size: 15px;
+  padding: 20px 0 20px 30px;   
   text-align: left;
+
 }
 
 td {
  border-bottom: 1px solid #d3dae1;
- font-size: 13px;
- padding: 5px;
+ font-size: 14px;
+ padding: 20px 20px 20px 30px;
+ /*padding: 20px 0 20px 0px;*/
  text-align: left;
+}
+
+.table-subtitles {
+  padding: 20px 20px 20px 30px;
+  /*padding: 25px 0 25px 0;*/
+  font-weight: bold;
+}
+
+.edit-btn {
+    background-color: #7e8ba4;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+.edit-btn:hover  {
+  background-color: white;
+  color: #7e8ba4;
 }
 
 /*SOCIAL MEDIA AREA STYLING*/
