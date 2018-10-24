@@ -1,17 +1,19 @@
-*{
+*,
+*:after,
+*:before {
   box-sizing: border-box;
 }
 
 body {
+  background-color: white;
   display: grid;
   grid-template-columns: 210px 1fr;
-  background-color: white;
   font-family: 'Open Sans', 'Font Awesome\ 5 Free', sans-serif;
   margin: auto;
 }
 
 /*SIDEBAR MENU STYLING*/
-.side {
+.side-menus-contain {
   background-color: #374050;
   color: #a2abbc;
 }
@@ -104,8 +106,8 @@ label {
 .search-bar {
   border: none; 
   font-size: 16px;
-  padding-left: 24px;
   font-weight: 600;
+  padding-left: 24px;
 }
 
 .search-bar:hover{
@@ -145,6 +147,7 @@ a:hover {
 }
 
 .open-btn {
+  border: 1px solid #d3dae1;
   border-radius: 20px;
   color: #7d8593;
   padding: 8px 11px 8px 11px;
@@ -161,19 +164,20 @@ a:hover {
   color: green;
 }
 
-.circle-btn {
+.circle-btns {
+  border: 1px solid #d3dae1;
   border-radius: 55%;
   color: #7d8593;
-  padding: 7px 11px
+  padding: 7px 11px;
+}
+
+.circle-btns:hover {
+  background-color: #47a3f2;
+  color: white;
 }
 
 .pencil-btn {
   padding: 7px 9px;
-}
-
-.circle-btn:hover {
-  background-color: #47a3f2;
-  color: white;
 }
 
 /*PAGE NAVIGATION MENU STYLING*/
@@ -194,11 +198,11 @@ a:hover {
 }
 
 .page-nav-items:hover{
-  color: #4e515d;
   background-color: white;
-  font-weight: bold;
-  border-left: none;
   border-bottom : 3px solid #47a3f2;
+  border-left: none;
+  color: #4e515d;
+  font-weight: bold;
 }
 
 /*CHART AREA STYLING*/
@@ -228,11 +232,11 @@ a:hover {
 }
 
 .inner-applicant-circ {
+  animation: applicant-animate 2s ease-in;
   fill: none;
   stroke-width: 1.7;
   stroke: #67b8bf;
   stroke-linecap: round;
-  animation: applicant-animate 2s ease-in;
 }
 
 @keyframes applicant-animate {
@@ -241,11 +245,11 @@ a:hover {
 }
 
 .inner-interview-circ {
+  animation: interview-animate 2s ease-in;
   fill: none;
   stroke-width: 1.7;
   stroke: #47a4f3;
   stroke-linecap: round;
-  animation: interview-animate 2s ease-in;
 }
 
 @keyframes interview-animate {
@@ -254,11 +258,11 @@ a:hover {
 }
 
 .inner-forward-circ{
+  animation: forward-circ-animate 2s ease-in;  
   fill: none;
   stroke-width: 1.7;
   stroke: #a46eab;
   stroke-linecap: round;
-  animation: forward-circ-animate 2s ease-in;  
 }
 
 @keyframes forward-circ-animate {
@@ -284,8 +288,8 @@ a:hover {
 }
 
 .bars{
-  margin: auto;
   animation: animate-bar-graph 2s ease-in;  
+  margin: auto;
 }
 
 @keyframes animate-bar-graph {
@@ -294,13 +298,14 @@ a:hover {
 }
 
 .total-btn, .applicant-btn {
+  border: 1px solid #d3dae1;
   border-radius: 20px;
   color: #7d8593;
   font-size: 12px;
   font-weight: bold;
+  margin: auto;
   padding: 7px 5px 7px 5px;
   width: 200px;
-  margin: auto;
 }
 
 .applicant-btn {
@@ -328,8 +333,8 @@ a:hover {
 .fa-chevron-circle-up {
   color: #9ca3ae;
   font-size: 24px;
-  padding-top: 2px;
   padding-bottom: 5px;
+  padding-top: 2px;
 }
 
 .fa-chevron-circle-up:hover  {
@@ -341,17 +346,18 @@ a:hover {
   background-color: #edf2f6;
   display: grid;
   grid-template-columns: 1fr 400px;
+  grid-gap: 20px;
 }
 
 table {
-  border-collapse: collapse;
   background-color: white;
+  border-collapse: collapse;
   color: #717d93;
   margin: 40px;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
-.job-table th{
+.job-table th {
   width: 30%;
 }
 
@@ -369,38 +375,42 @@ th {
   font-size: 15px;
   padding: 20px 0 20px 30px;   
   text-align: left;
-
 }
 
 td {
- border-bottom: 1px solid #d3dae1;
- font-size: 14px;
- padding: 30px;
- /*padding: 20px 0 20px 0px;*/
- text-align: left;
+  border-bottom: 1px solid #d3dae1;
+  font-size: 14px;
+  padding: 25px;
+  text-align: left;
 }
 
 .edit-table-sectn {
   border: none;
 }
 .table-subtitles {
-  padding: 20px 20px 20px 30px;
+  padding: 15px 15px 15px 25px;
   font-weight: bold;
 }
 
 .edit-btn {
-    background-color: #7e8ba4;
-    border: none;
-    color: white;
-    font-weight: 600;
-    padding: 10px;
-    text-align: center;
-    width: 80px;
+  background-color: #7e8ba4;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  width: 80px;
 }
 
 .edit-btn:hover  {
   background-color: white;
   color: #7e8ba4;
+}
+
+.hiring-lead-img {
+  border-radius: 50%;
+  border: 1px solid black;
+  height: 60px;
 }
 
 /*SOCIAL MEDIA AREA STYLING*/
@@ -410,6 +420,7 @@ td {
 }
 
 .social-btns {
+  border-radius: 4px;
   color: white;
   display: block;
   margin: 0 auto 15px auto;
@@ -458,13 +469,17 @@ td {
 }
 
 .link-for-widget, .job-link {
-  flex: 1;
   background-color: white;
+  border: 0;
+  border-radius: 4px 0 0 4px;
+  flex: 1;
   padding: 10px;
 }
 
 .copy-widget-btn, .copy-link-btn {
   background-color: #67b8bf;
+  border: 0;
+  border-radius: 0px 4px 4px 0px;
   color: white;
 }
 
@@ -474,6 +489,8 @@ td {
 
 .upload-resume-btn {
   background-color: white;
+  border: 0;
+  border-radius: 4px;
   flex: 1;
   padding: 12px;
 } 
