@@ -377,9 +377,14 @@ th {
   text-align: left;
 }
 
+tr {
+  height: 2em;
+}
+
 td {
   border-bottom: 1px solid #d3dae1;
   font-size: 14px;
+  height: 2em;
   padding: 25px;
   text-align: left;
 }
