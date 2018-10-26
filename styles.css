@@ -93,6 +93,11 @@ label {
   padding-right: 2px;
 }
 
+.expand-menu-hover:hover {
+  background-color: #47a3f2;
+  color: white;
+}
+
 .fa-align-justify {
   padding-right: 10px;
 }
@@ -205,6 +210,11 @@ a:hover {
   border-left: none;
   color: #4e515d;
   font-weight: bold;
+}
+
+#horizontal-ellipsis,
+#vertical-ellipsis {
+  display: none;
 }
 
 /*CHART AREA STYLING*/
@@ -522,7 +532,15 @@ td {
 }
 
 /*MEDIA QUERIES*/
+@media screen and (max-width: 1280px) {
+    .hide-nav-first {
+    display: none;
+  }
 
+  #horizontal-ellipsis {
+    display: inline;
+  }
+}
 @media screen and (max-width: 1150px) {
   body {
     grid-template-columns: 1fr;
@@ -530,12 +548,23 @@ td {
   .side-menus-contain {
     display: none;
   }
+
+  .hide-nav-first {
+    display: none;
+  }
+
+  #horizontal-ellipsis {
+    display: inline;
+  }
 }
 
 @media screen and (max-width: 900px) {
   .charts-area {
     display: grid;
     grid-template-columns: 1fr;
+    padding-left: 30px;
+    padding-top: 44px;
+    padding-right: 30px;
   }
 
   .applicant-chart, 
@@ -545,6 +574,11 @@ td {
     margin: auto;
   }
 
+  .collapse-bar {
+    background-color: #edf2f6;
+    padding: 30px 30px 30px 40px
+  }
+  
   .job-area {
     display: grid;
     grid-template-columns: 1fr;
@@ -557,6 +591,55 @@ td {
   .social-media-area {
     margin: auto;
     width: 88.5%;
+  }
+
+
+  .hide-nav-first, .hide-nav-second {
+    display: none;
+  }
+
+  #horizontal-ellipsis {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .page-header {
+    align-items: flex-start;
+    border-top: 1px solid #d3dae1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 40px 0 40px;
+  }
+
+  .hide-nav-third {
+    display: none;
+  }
+
+  #horizontal-ellipsis {
+    display: none;
+  }
+
+  #vertical-ellipsis {
+    display: inline;
+  }
+
+  .circle-graphs-container {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .applicant-chart, 
+  .interview-chart, 
+  .forward-chart {
+    width: 32%;
+    margin: auto;
+  }
+  
+  .applicant-chart, 
+  .interview-chart {
+    margin-bottom: 10px;
   }
 
 }

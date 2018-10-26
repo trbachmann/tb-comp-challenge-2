@@ -12,12 +12,12 @@
 <body>
   <section class="side-menus-contain">
     <section class="user">
-      <img class="user-picture" src="./images/tiffany-img.png" alt="Tiffany's Image">
+      <img class="user-picture" src="./images/tiffany-img.png" alt="Image of user">
       <p class="user-name">Tiffany Bachmann <i class="fas fa-caret-down"></i></p>
     </section>
     <section class="main-options">
       <p class="side-br-subtitles">Main</p>
-      <ul class=side-bar-menus>
+      <ul class=side-bar-menus role="menu">
         <li><i class="fas fa-home sidebar-icons"></i>HOME</li>
         <li><i class="fas fa-briefcase sidebar-icons"></i> JOBS</li>
         <li><i class="fas fa-file-invoice sidebar-icons"></i> RESUMES</li>
@@ -27,7 +27,7 @@
     </section>
     <section class="admin-options">
       <p class="side-br-subtitles">Admin</p>
-      <ul class=side-bar-menus>
+      <ul class=side-bar-menus role="menu">
         <li><i class="fas fa-user-friends sidebar-icons"></i>USERS</li>
         <li><i class="fas fa-map-marker-alt sidebar-icons"></i> LOCATIONS</li>
         <li><i class="far fa-chart-bar sidebar-icons"></i>WORKFLOWS</li>
@@ -37,7 +37,7 @@
     </section>
     <section class="categories">
       <p class="side-br-subtitles">Categories</p>
-      <ul class=side-bar-menus>
+      <ul class=side-bar-menus role="group">
         <li class="sidebar-icons">
           <input class="checkboxes administrative" type="checkbox" id="admin">
           <label for="admin"> Aministrative</label>
@@ -59,36 +59,38 @@
   </section>
   <section class="main">
     <section class="search-area">
-      <button class= "square-btns" aria-label="Expand Menu"><i class="fas fa-caret-left"></i><i class="fas fa-align-justify"></i></button>
-      <input class="search-bar"type="text" placeholder="&#xf002; Search for a job, task or resume" maxlength="34">
-      <button class="square-btns left-border"><i class="fas fa-user-plus"></i></button>
-      <button class="square-btns"><i class="far fa-calendar-minus"></i></button>
-      <button class="square-btns"><i class="fas fa-th"></i></button>
+      <button class= "square-btns" aria-expanded="true" aria-label="Expand user menu"><i class="fas fa-caret-left expand-menu-hover"></i><i class="fas fa-align-justify expand-menu-hover"></i></button>
+      <input class="search-bar" role="searchbar" type="text" placeholder="&#xf002; Search for a job, task or resume" maxlength="34">
+      <button class="square-btns left-border" aria-label="Add new job posting"><i class="fas fa-user-plus"></i></button>
+      <button class="square-btns" aria-label="Open calendar"><i class="far fa-calendar-minus"></i></button>
+      <button class="square-btns" aria-label="Go to all jobs created"><i class="fas fa-th"></i></button>
     </section>
     <section class="page-header">
       <section class="job-title-and-location">
         <h1 class="light-title">Customer Service Rep</h1>
-        <p class="job-location"><i class="fas fa-map-marker-alt"></i>  West Palm Beach, FL ∙ <a href="https://example.com">Preview this post</a></p> 
+        <p class="job-location"><i class="fas fa-map-marker-alt"></i>  West Palm Beach, FL ∙ <a href="https://www.awesomecompany.com/career-opportunities/customer-service-rep">Preview this post</a></p> 
       </section>      
       <section class="page-buttons">
-        <button class="open-btn"><span class="open-btn-dot">●</span> OPEN</button>
-        <button class="circle-btns"><i class="fas fa-bookmark"></i></button>
-        <button class="circle-btns pencil-btn"><i class="fas fa-pencil-alt"></i></button>
-        <button class="circle-btns"><i class="fas fa-trash-alt"></i></button>
+        <button class="open-btn" aria-label="Set job posting as opened or closed"><span class="open-btn-dot">●</span> OPEN</button>
+        <button class="circle-btns" area-label="Bookmar job posting"><i class="fas fa-bookmark"></i></button>
+        <button class="circle-btns pencil-btn" aria-label="Edit job posting details"><i class="fas fa-pencil-alt"></i></button>
+        <button class="circle-btns" aria-label="Delete job posting"><i class="fas fa-trash-alt"></i></button>
       </section>
     </section>
-    <ul class="page-nav-list">
+    <ul class="page-nav-list" role="menu">
         <li class="page-nav-items">SUMMARY</li>
-        <li class="page-nav-items">APPLICANTS</li>
-        <li class="page-nav-items">JOB BOARD</li>
-        <li class="page-nav-items">INTERVIEW</li>
-        <li class="page-nav-items">ACTIVITY</li>
-        <li class="page-nav-items">BROADCAST</li>
-        <li class="page-nav-items">NOTIFICATIONS</li>
+        <li class="page-nav-items hide-nav-third">APPLICANTS</li>
+        <li class="page-nav-items hide-nav-third">JOB BOARD</li>
+        <li class="page-nav-items hide-nav-second">INTERVIEW</li>
+        <li class="page-nav-items hide-nav-second">ACTIVITY</li>
+        <li class="page-nav-items hide-nav-first">BROADCAST</li>
+        <li class="page-nav-items hide-nav-first">NOTIFICATIONS</li>
+        <li class="page-nav-items" id="horizontal-ellipsis"><i class="fas fa-ellipsis-h"></i></li>
+        <li class="page-nav-items" id="vertical-ellipsis"><i class="fas fa-ellipsis-v"></i></li>
       </ul>
     <section class="charts-area">
       <section class="circle-graphs-container">
-        <section class="applicant-chart">
+        <section class="applicant-chart" alt="Circle chart showing a progression of the number of applicants for the job posting">
           <svg viewBox="0 0 36 36">
             <path class="outer-applicant-circ"
               d="M18 33.9155
@@ -105,7 +107,7 @@
             <text x="10" y="24.35" class="graph-text">APPLICANTS</text>
           </svg>
         </section>
-        <section class="interview-chart">
+        <section class="interview-chart" alt="Circle chart showing a progression of the number of interviews held for the job posting">
           <svg viewBox="0 0 36 36">
             <path class="outer-interview-circ"
               d="M18 33.9155
@@ -122,7 +124,7 @@
             <text x="11" y="24.35" class="graph-text">INTERVIEWS</text>
           </svg>
         </section>
-        <section class="forward-chart">
+        <section class="forward-chart" alt="Circle chart showing progression of the number of times the job posting has been forwarded by users">
           <svg viewBox="0 0 36 36">
             <path class="outer-forward-circ"
               d="M18 33.9155
@@ -141,12 +143,12 @@
         </section>
       </section>
       <section class="bar-graph-area">
-        <img class="bars" src="./images/applicant-graph-375.png" alt="Graph showing applicants reciecved per day">
+        <img class="bars" src="./images/applicant-graph-375.png" alt="Graph showing applicants reciecved per day across a period of time">
       </section>
       <button class="total-btn">TOTALS •  Out of 5,231 views</button>
       <button class="applicant-btn">APPLICANTS/DAY</button>
     </section>
-    <div class="collapse-bar">
+    <div class="collapse-bar" aria-expanded="true" aria-label="Expand graph area showing statistics for the job posting">
       <hr class="collapse-lines">
       <i class="fas fa-chevron-circle-up"></i>
       <hr class="collapse-lines">
@@ -202,16 +204,16 @@
           <p class="social-subtitles"><i class="fas fa-globe-americas"></i> Link to this job</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <section class="input-add-on">
-            <input class="job-link" type="text" placeholder="https://loemipsum.com/thisjob...">
-            <button class="copy-link-btn">Copy</button>
+            <input class="job-link" aria-label="Link for the job posting that can be copied and used to place on other websites or to share via email" type="text" placeholder="https://loemipsum.com/thisjob...">
+            <button class="copy-link-btn" aria-label="Copy the link for the job posting that can be used to share it">Copy</button>
           </section>
         </section>
         <section class="button-widget-area">
           <p class="social-subtitles"><i class="fas fa-window-maximize"></i> Use the Button Widghet</p>
-          <p>This widget embeds the buttons for sharing the job for submitting a resume on your website</p>
+          <p>This widget embeds the buttons for sharing the job on your website</p>
           <section class="input-add-on">
-            <input class="link-for-widget" type="text" placeholder="<script type=text/javascript s...">
-            <button class="copy-widget-btn">Copy</button>
+            <input class="link-for-widget" aria-label="Script that can be added to other websites in order to embed a button widget, which can be clicked to share the job posting"type="text" placeholder="<script type=text/javascript s...">
+            <button class="copy-widget-btn" aria-label="Copy the script that can be added to another website for a button widget, which can be clicked to share the job posting">Copy</button>
           </section>
         </section>
         <section class="upload-resume-area">
@@ -219,7 +221,7 @@
           <p>You can automatically upload multiples resumes to this job by emailing the address below.</p>
           <!-- <button class="upload-resume-btn">tomtizzy@gmail.com</button> -->
           <section class="input-add-on">
-            <input class="upload-resume-btn" type="text" placeholder="christinatizzy@gmail.com">
+            <input class="upload-resume-btn" aria-label="Email address for the person you can send multiple resumes to, which will then upload them all to this job posting"type="text" placeholder="christinatizzy@gmail.com">
           </section>
         </section>
       </section>
