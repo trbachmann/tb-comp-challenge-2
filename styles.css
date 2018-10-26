@@ -30,7 +30,9 @@ body {
   text-align: center;
 }
 
-.main-options, .admin-options, .categories {
+.main-options, 
+.admin-options, 
+.categories {
   border-top: 2px solid #2e3645;
 }
 
@@ -220,12 +222,16 @@ a:hover {
   margin-bottom: 30px;
 }
 
-.applicant-chart, .interview-chart, .forward-chart {
+.applicant-chart, 
+.interview-chart, 
+.forward-chart {
   width: 30%;
   margin: auto;
 }
 
-.outer-applicant-circ, .outer-interview-circ, .outer-forward-circ {
+.outer-applicant-circ, 
+.outer-interview-circ, 
+.outer-forward-circ {
   fill: none;
   stroke: #dbe4ea;
   stroke-width: 2;
@@ -297,7 +303,8 @@ a:hover {
   100% {opacity: 1;}
 }
 
-.total-btn, .applicant-btn {
+.total-btn, 
+.applicant-btn {
   border: 1px solid #d3dae1;
   border-radius: 20px;
   color: #7d8593;
@@ -312,7 +319,8 @@ a:hover {
   width: 150px;
 }
 
-.total-btn:hover, .applicant-btn:hover  {
+.total-btn:hover, 
+.applicant-btn:hover  {
   background-color: #47a3f2;
   color: white;
 }
@@ -353,7 +361,7 @@ table {
   background-color: white;
   border-collapse: collapse;
   color: #717d93;
-  margin: 40px;
+  margin: 40px 20px 20px 40px;
   table-layout: auto;
 }
 
@@ -421,7 +429,7 @@ td {
 /*SOCIAL MEDIA AREA STYLING*/
 .social-media-area {
   color: #5b6677;
-  margin: 40px;
+  margin: 40px 40px 20px 20px;
 }
 
 .social-btns {
@@ -437,7 +445,9 @@ td {
   width: 100%;
 }
 
-.fa-facebook, .fa-twitter, .fa-linkedin {
+.fa-facebook, 
+.fa-twitter, 
+.fa-linkedin {
   float: left;
   padding-left: 10px;
 }
@@ -454,11 +464,14 @@ td {
   background-color: #3481b8;
 }
 
-.facebook-btn:hover, .twitter-btn:hover, .linkedin-btn:hover {
+.facebook-btn:hover, 
+.twitter-btn:hover, 
+.linkedin-btn:hover {
   font-weight: bold;
 }
 
-.button-widget-area, .upload-resume-area {
+.button-widget-area, 
+.upload-resume-area {
   border-top: 2px solid #d3dae1;
   padding-top: 20px;
   padding-bottom: 30px;
@@ -473,7 +486,8 @@ td {
   display: flex;
 }
 
-.link-for-widget, .job-link {
+.link-for-widget, 
+.job-link {
   background-color: white;
   border: 0;
   border-radius: 4px 0 0 4px;
@@ -481,14 +495,16 @@ td {
   padding: 10px;
 }
 
-.copy-widget-btn, .copy-link-btn {
+.copy-widget-btn, 
+.copy-link-btn {
   background-color: #67b8bf;
   border: 0;
   border-radius: 0px 4px 4px 0px;
   color: white;
 }
 
-.copy-widget-btn:hover, .copy-link-btn:hover {
+.copy-widget-btn:hover, 
+.copy-link-btn:hover {
   font-weight: bold;
 }
 
@@ -505,4 +521,42 @@ td {
   font-weight: bold;
 }
 
+/*MEDIA QUERIES*/
 
+@media screen and (max-width: 1150px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  .side-menus-contain {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .charts-area {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .applicant-chart, 
+  .interview-chart, 
+  .forward-chart {
+    width: 20%;
+    margin: auto;
+  }
+
+  .job-area {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  table {
+  margin: 40px;
+  }
+
+  .social-media-area {
+    margin: auto;
+    width: 88.5%;
+  }
+
+}
