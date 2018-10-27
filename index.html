@@ -39,7 +39,7 @@
       <p class="side-br-subtitles">Categories</p>
       <ul class=side-bar-menus role="group">
         <li class="sidebar-icons">
-          <input class="checkboxes administrative" type="checkbox" id="admin">
+          <input class="checkboxes administrative" type="checkbox" id="admin" checked>
           <label for="admin"> Aministrative</label>
         </li>
         <li class="sidebar-icons">
@@ -59,11 +59,12 @@
   </section>
   <section class="main">
     <section class="search-area">
-      <button class= "square-btns" aria-expanded="true" aria-label="Expand user menu"><i class="fas fa-caret-left expand-menu-hover"></i><i class="fas fa-align-justify expand-menu-hover"></i></button>
+      <button class= "square-btns expand-menu-btn" aria-expanded="true" aria-label="Expand user menu"><i class="fas fa-caret-left" id="left-caret"></i><i class="fas fa-align-justify"></i></button>
       <input class="search-bar" role="searchbar" type="text" placeholder="&#xf002; Search for a job, task or resume" maxlength="34">
-      <button class="square-btns left-border" aria-label="Add new job posting"><i class="fas fa-user-plus"></i></button>
-      <button class="square-btns" aria-label="Open calendar"><i class="far fa-calendar-minus"></i></button>
-      <button class="square-btns" aria-label="Go to all jobs created"><i class="fas fa-th"></i></button>
+      <input class="search-bar-mobile-only" area-label="Search bar for mobile, where you can search for a job, task or resume"role="searchbar" type="text" placeholder="&#xf002;" maxlength="34">
+      <button class="square-btns left-border new-job-btn" aria-label="Add new job posting"><i class="fas fa-user-plus"></i></button>
+      <button class="square-btns calendar-btn" aria-label="Open calendar"><i class="far fa-calendar-minus"></i></button>
+      <button class="square-btns all-jobs-btn" aria-label="Go to all jobs created"><i class="fas fa-th"></i></button>
     </section>
     <section class="page-header">
       <section class="job-title-and-location">
@@ -86,7 +87,6 @@
         <li class="page-nav-items hide-nav-first">BROADCAST</li>
         <li class="page-nav-items hide-nav-first">NOTIFICATIONS</li>
         <li class="page-nav-items" id="horizontal-ellipsis"><i class="fas fa-ellipsis-h"></i></li>
-        <li class="page-nav-items" id="vertical-ellipsis"><i class="fas fa-ellipsis-v"></i></li>
       </ul>
     <section class="charts-area">
       <section class="circle-graphs-container">
@@ -188,11 +188,16 @@
             </tr>
             <tr>
               <td class="table-subtitles">HIRING LEAD</td>
-              <td><img class="hiring-lead-img" src="./images/xtina-img.jpeg" alt="Woman sitting">Christina Tizzy</td>
+              <td>
+                <div class="hiring-lead-contain">
+                  <img class="hiring-lead-img" src="./images/xtina-img.jpeg" alt="Woman sitting">
+                  <p>Christina Tizzy</p>
+                </div>
+              </td>
             </tr>
             <tr>
               <td class="table-subtitles">APPROVED SALARY</td>
-              <td>$58,000</td>
+              <td class="salary-bolded">$58,000</td>
             </tr>
           </tbody>
           </table>
