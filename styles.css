@@ -83,7 +83,7 @@ label {
   text-align: center;
 }
 
-.square-btns:hover{
+.square-btns:hover, #left-caret:hover {
   background-color: #47a3f2;
   color: white;
 }
@@ -91,11 +91,6 @@ label {
 .fa-caret-left {
   color: #47a3f2;
   padding-right: 2px;
-}
-
-.expand-menu-hover:hover {
-  background-color: #47a3f2;
-  color: white;
 }
 
 .fa-align-justify {
@@ -119,6 +114,10 @@ label {
 
 .search-bar:hover{
   border: .5px solid #47a3f2;
+}
+
+.search-bar-mobile-only {
+  display: none;
 }
 
 /*PAGE HEAD STYLING (where CSR and location is)*/
@@ -410,6 +409,7 @@ td {
 .edit-table-sectn {
   border: none;
 }
+
 .table-subtitles {
   padding: 15px 15px 15px 25px;
   font-weight: bold;
@@ -430,10 +430,20 @@ td {
   color: #7e8ba4;
 }
 
+.hiring-lead-contain {
+  display: flex;
+  align-items: center;
+}
+
 .hiring-lead-img {
   border-radius: 50%;
   border: 1px solid black;
   height: 60px;
+  margin-right: 10px;
+}
+
+.salary-bolded {
+  font-weight: bold;
 }
 
 /*SOCIAL MEDIA AREA STYLING*/
@@ -533,7 +543,7 @@ td {
 
 /*MEDIA QUERIES*/
 @media screen and (max-width: 1280px) {
-    .hide-nav-first {
+  .hide-nav-first {
     display: none;
   }
 
@@ -545,7 +555,12 @@ td {
   body {
     grid-template-columns: 1fr;
   }
+
   .side-menus-contain {
+    display: none;
+  }
+  
+  #left-caret {
     display: none;
   }
 
@@ -617,14 +632,6 @@ td {
     display: none;
   }
 
-  #horizontal-ellipsis {
-    display: none;
-  }
-
-  #vertical-ellipsis {
-    display: inline;
-  }
-
   .circle-graphs-container {
     display: block;
     margin-bottom: 30px;
@@ -642,4 +649,85 @@ td {
     margin-bottom: 10px;
   }
 
+  .collapse-lines {
+    color: #d3dae1;
+    display: inline-block;
+    margin: 8px auto 6px auto;
+    width: 45%;
+  }
+
+  .social-media-area {
+    margin: auto;
+    width: 87.5%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .social-media-area {
+    margin: auto;
+    width: 86.5%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .search-bar {
+    display: none;
+  }
+
+  .search-bar-mobile-only {
+    display: inline;
+    border: none; 
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 24px;
+  }
+
+  .search-bar-mobile-only:hover{
+    border: .5px solid #47a3f2;
+  }
+
+  .social-media-area {
+    margin: auto;
+    width: 84.7%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .square-btns {
+    border-top: 1px solid #d3dae1;
+  }
+
+  .expand-menu-btn {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+
+  .search-bar-mobile-only {
+    grid-column: 1 / span 4;
+  }
+
+  .new-job-btn {
+    grid-column: 2 / span 1;
+    grid-row: 2;
+  }
+
+  .calendar-btn {
+    grid-column: 3 / span 1;
+    grid-row: 2;
+  }
+
+  .all-jobs {
+    grid-column: 4 / span 1;
+    grid-row: 2;
+  }
+
+  .social-media-area {
+    margin: auto;
+    width: 81%;
+  }
 }
