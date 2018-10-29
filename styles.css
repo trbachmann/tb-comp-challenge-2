@@ -74,9 +74,9 @@ label {
 .square-btns {
   background: none;
   border-right: 1px solid #d3dae1;
-  border-bottom: none;
-  border-top: none;
-  border-left: none;
+  border-bottom: 0;
+  border-top: 0;
+  border-left: 0;
   color: #7d8593;
   font-size: 20px;
   height: 65px;
@@ -106,7 +106,7 @@ label {
 }
 
 .search-bar {
-  border: none; 
+  border: 0; 
   font-size: 16px;
   font-weight: 600;
   padding-left: 24px;
@@ -152,34 +152,26 @@ a:hover {
   text-decoration: underline;
 }
 
-.open-btn {
-  border: 1px solid #d3dae1;
-  border-radius: 20px;
-  color: #7d8593;
-  padding: 8px 11px 8px 11px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.open-btn:hover {
-  background-color: #47a3f2;
-  color: white;
-}
-
-.open-btn-dot {
-  color: green;
-}
-
 .circle-btns {
   border: 1px solid #d3dae1;
   border-radius: 55%;
   color: #7d8593;
-  padding: 7px 11px;
+  padding: 8px 11px;
 }
 
 .circle-btns:hover {
   background-color: #47a3f2;
   color: white;
+}
+
+.open-btn {
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.open-btn-dot {
+  color: green;
 }
 
 .pencil-btn {
@@ -193,8 +185,8 @@ a:hover {
 }
 
 .page-nav-items {
-  border-left: none;
   border-bottom: 2px solid transparent;
+  border-left: 0;
   color: #9ca3ae;
   display: inline;
   font-size: 13px;
@@ -206,13 +198,12 @@ a:hover {
 .page-nav-items:hover{
   background-color: white;
   border-bottom : 3px solid #47a3f2;
-  border-left: none;
+  border-left: 0;
   color: #4e515d;
   font-weight: bold;
 }
 
-#horizontal-ellipsis,
-#vertical-ellipsis {
+.horizontal-ellipsis {
   display: none;
 }
 
@@ -246,38 +237,37 @@ a:hover {
   stroke-width: 2;
 }
 
-.inner-applicant-circ {
-  animation: applicant-animate 2s ease-in;
+.inner-applicant-circ,
+.inner-interview-circ,
+.inner-forward-circ {
   fill: none;
   stroke-width: 1.7;
-  stroke: #67b8bf;
   stroke-linecap: round;
 }
 
-@keyframes applicant-animate {
+.inner-applicant-circ {
+  animation: applicant-circ-animate 2s ease-in;
+  stroke: #67b8bf;
+}
+
+@keyframes applicant-circ-animate {
   0% {stroke-dasharray: 0, 100}
   100% {stroke-dasharray: 80, 100 }
 }
 
 .inner-interview-circ {
-  animation: interview-animate 2s ease-in;
-  fill: none;
-  stroke-width: 1.7;
+  animation: interview-circ-animate 2s ease-in;
   stroke: #47a4f3;
-  stroke-linecap: round;
 }
 
-@keyframes interview-animate {
+@keyframes interview-circ-animate {
   0% {stroke-dasharray: 0, 100}
   100% {stroke-dasharray: 40, 100 }
 }
 
-.inner-forward-circ{
+.inner-forward-circ {
   animation: forward-circ-animate 2s ease-in;  
-  fill: none;
-  stroke-width: 1.7;
   stroke: #a46eab;
-  stroke-linecap: round;
 }
 
 @keyframes forward-circ-animate {
@@ -298,11 +288,10 @@ a:hover {
 
 .bar-graph-area {
   display: flex;
-  margin-bottom: 30px;
-  
+  margin-bottom: 30px; 
 }
 
-.bars{
+.bars {
   animation: animate-bar-graph 2s ease-in;  
   margin: auto;
 }
@@ -314,24 +303,16 @@ a:hover {
 
 .total-btn, 
 .applicant-btn {
-  border: 1px solid #d3dae1;
   border-radius: 20px;
-  color: #7d8593;
   font-size: 12px;
   font-weight: bold;
   margin: auto;
-  padding: 7px 5px 7px 5px;
+  padding: 7px 5px;
   width: 200px;
 }
 
 .applicant-btn {
   width: 150px;
-}
-
-.total-btn:hover, 
-.applicant-btn:hover  {
-  background-color: #47a3f2;
-  color: white;
 }
 
 /*COLLAPSE BAR STYLING AREA*/
@@ -407,7 +388,7 @@ td {
 }
 
 .edit-table-sectn {
-  border: none;
+  border: 0;
 }
 
 .table-subtitles {
@@ -417,7 +398,7 @@ td {
 
 .edit-btn {
   background-color: #7e8ba4;
-  border: none;
+  border: 0;
   color: white;
   font-weight: 600;
   padding: 10px;
@@ -484,11 +465,6 @@ td {
   background-color: #3481b8;
 }
 
-.facebook-btn:hover, 
-.twitter-btn:hover, 
-.linkedin-btn:hover {
-  font-weight: bold;
-}
 
 .button-widget-area, 
 .upload-resume-area {
@@ -523,6 +499,9 @@ td {
   color: white;
 }
 
+.facebook-btn:hover, 
+.twitter-btn:hover, 
+.linkedin-btn:hover,
 .copy-widget-btn:hover, 
 .copy-link-btn:hover {
   font-weight: bold;
@@ -541,16 +520,17 @@ td {
   font-weight: bold;
 }
 
-/*MEDIA QUERIES*/
+/*MEDIA QUERIES FOR SMALLER DESKTOP SCREENS & MOBILE SCREENS*/
 @media screen and (max-width: 1280px) {
-  .hide-nav-first {
+  .hide-first-nav-items {
     display: none;
   }
 
-  #horizontal-ellipsis {
+  .horizontal-ellipsis {
     display: inline;
   }
 }
+
 @media screen and (max-width: 1150px) {
   body {
     grid-template-columns: 1fr;
@@ -564,22 +544,33 @@ td {
     display: none;
   }
 
-  .hide-nav-first {
-    display: none;
-  }
-
-  #horizontal-ellipsis {
-    display: inline;
-  }
 }
 
 @media screen and (max-width: 900px) {
   .charts-area {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr 60px 210px 60px;
     padding-left: 30px;
-    padding-top: 44px;
     padding-right: 30px;
+    padding-top: 44px;
+  }
+
+  .circle-graphs-container {
+    grid-row: 1;
+  }
+
+  .total-btn {
+    grid-row: 2;
+    margin-top: 0;
+  }
+
+  .bar-graph-area {
+    grid-row: 3;
+  }
+
+  .applicant-btn {
+    grid-row: 4;
   }
 
   .applicant-chart, 
@@ -600,7 +591,7 @@ td {
   }
 
   table {
-  margin: 40px;
+    margin: 40px;
   }
 
   .social-media-area {
@@ -608,14 +599,10 @@ td {
     width: 88.5%;
   }
 
-
-  .hide-nav-first, .hide-nav-second {
+  .hide-second-nav-items {
     display: none;
   }
 
-  #horizontal-ellipsis {
-    display: inline;
-  }
 }
 
 @media screen and (max-width: 750px) {
@@ -628,7 +615,7 @@ td {
     padding: 30px 40px 0 40px;
   }
 
-  .hide-nav-third {
+  .hide-third-nav-items {
     display: none;
   }
 
@@ -640,8 +627,8 @@ td {
   .applicant-chart, 
   .interview-chart, 
   .forward-chart {
-    width: 32%;
     margin: auto;
+    width: 32%;
   }
   
   .applicant-chart, 
@@ -657,17 +644,16 @@ td {
   }
 
   .social-media-area {
-    margin: auto;
     width: 87.5%;
   }
 }
 
 @media screen and (max-width: 650px) {
   .social-media-area {
-    margin: auto;
     width: 86.5%;
   }
 }
+
 @media screen and (max-width: 560px) {
   .search-bar {
     display: none;
@@ -675,18 +661,17 @@ td {
 
   .search-bar-mobile-only {
     display: inline;
-    border: none; 
+    border: 0; 
     font-size: 16px;
     font-weight: 600;
     padding-left: 24px;
   }
 
-  .search-bar-mobile-only:hover{
+  .search-bar-mobile-only:hover {
     border: .5px solid #47a3f2;
   }
 
   .social-media-area {
-    margin: auto;
     width: 84.7%;
   }
 }
@@ -702,13 +687,13 @@ td {
     border-top: 1px solid #d3dae1;
   }
 
+  .search-bar-mobile-only {
+    grid-column: 1 / span 4;
+  }
+
   .expand-menu-btn {
     grid-column: 1 / span 1;
     grid-row: 2;
-  }
-
-  .search-bar-mobile-only {
-    grid-column: 1 / span 4;
   }
 
   .new-job-btn {
@@ -727,7 +712,6 @@ td {
   }
 
   .social-media-area {
-    margin: auto;
     width: 81%;
   }
 }
