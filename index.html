@@ -12,7 +12,7 @@
 <body>
   <section class="side-menus-contain">
     <section class="user">
-      <img class="user-picture" src="./images/tiffany-img.png" alt="Image of user">
+      <img class="user-picture" src="./images/tiffany-img.png" alt="Image of woman who is the current logged in user">
       <p class="user-name">Tiffany Bachmann <i class="fas fa-caret-down"></i></p>
     </section>
     <section class="main-options">
@@ -60,8 +60,8 @@
   <section class="main">
     <section class="search-area">
       <button class= "square-btns expand-menu-btn" aria-expanded="true" aria-label="Expand user menu"><i class="fas fa-caret-left" id="left-caret"></i><i class="fas fa-align-justify"></i></button>
-      <input class="search-bar" role="searchbar" type="text" placeholder="&#xf002; Search for a job, task or resume" maxlength="34">
-      <input class="search-bar-mobile-only" area-label="Search bar for mobile, where you can search for a job, task or resume"role="searchbar" type="text" placeholder="&#xf002;" maxlength="34">
+      <input class="search-bar" role="searchbar" aria-label="Search bar to search for a job, task or resume" type="text" placeholder="&#xf002; Search for a job, task or resume" maxlength="34">
+      <input class="search-bar-mobile-only" aria-label="Search bar for mobile, where you can search for a job, task or resume"role="searchbar" type="text" placeholder="&#xf002;" maxlength="34">
       <button class="square-btns left-border new-job-btn" aria-label="Add new job posting"><i class="fas fa-user-plus"></i></button>
       <button class="square-btns calendar-btn" aria-label="Open calendar"><i class="far fa-calendar-minus"></i></button>
       <button class="square-btns all-jobs-btn" aria-label="Go to all jobs created"><i class="fas fa-th"></i></button>
@@ -72,21 +72,21 @@
         <p class="job-location"><i class="fas fa-map-marker-alt"></i>  West Palm Beach, FL ∙ <a href="https://www.awesomecompany.com/career-opportunities/customer-service-rep">Preview this post</a></p> 
       </section>      
       <section class="page-buttons">
-        <button class="open-btn" aria-label="Set job posting as opened or closed"><span class="open-btn-dot">●</span> OPEN</button>
-        <button class="circle-btns" area-label="Bookmar job posting"><i class="fas fa-bookmark"></i></button>
+        <button class="circle-btns open-btn" aria-label="Set job posting as opened or closed"><span class="open-btn-dot">●</span> OPEN</button>
+        <button class="circle-btns" aria-label="Bookmark job posting"><i class="fas fa-bookmark"></i></button>
         <button class="circle-btns pencil-btn" aria-label="Edit job posting details"><i class="fas fa-pencil-alt"></i></button>
         <button class="circle-btns" aria-label="Delete job posting"><i class="fas fa-trash-alt"></i></button>
       </section>
     </section>
     <ul class="page-nav-list" role="menu">
         <li class="page-nav-items">SUMMARY</li>
-        <li class="page-nav-items hide-nav-third">APPLICANTS</li>
-        <li class="page-nav-items hide-nav-third">JOB BOARD</li>
-        <li class="page-nav-items hide-nav-second">INTERVIEW</li>
-        <li class="page-nav-items hide-nav-second">ACTIVITY</li>
-        <li class="page-nav-items hide-nav-first">BROADCAST</li>
-        <li class="page-nav-items hide-nav-first">NOTIFICATIONS</li>
-        <li class="page-nav-items" id="horizontal-ellipsis"><i class="fas fa-ellipsis-h"></i></li>
+        <li class="page-nav-items hide-third-nav-items">APPLICANTS</li>
+        <li class="page-nav-items hide-third-nav-items">JOB BOARD</li>
+        <li class="page-nav-items hide-second-nav-items">INTERVIEW</li>
+        <li class="page-nav-items hide-second-nav-items">ACTIVITY</li>
+        <li class="page-nav-items hide-first-nav-items">BROADCAST</li>
+        <li class="page-nav-items hide-first-nav-items">NOTIFICATIONS</li>
+        <li class="page-nav-items horizontal-ellipsis" id="horizontal-ellipsis"><i class="fas fa-ellipsis-h"></i></li>
       </ul>
     <section class="charts-area">
       <section class="circle-graphs-container">
@@ -145,8 +145,8 @@
       <section class="bar-graph-area">
         <img class="bars" src="./images/applicant-graph-375.png" alt="Graph showing applicants reciecved per day across a period of time">
       </section>
-      <button class="total-btn">TOTALS •  Out of 5,231 views</button>
-      <button class="applicant-btn">APPLICANTS/DAY</button>
+      <button class="circle-btns total-btn">TOTALS •  Out of 5,231 views</button>
+      <button class="circle-btns applicant-btn">APPLICANTS/DAY</button>
     </section>
     <div class="collapse-bar" aria-expanded="true" aria-label="Expand graph area showing statistics for the job posting">
       <hr class="collapse-lines">
@@ -224,7 +224,6 @@
         <section class="upload-resume-area">
           <p class="social-subtitles"><i class="fas fa-location-arrow"></i> Upload Resume By Email</p>
           <p>You can automatically upload multiples resumes to this job by emailing the address below.</p>
-          <!-- <button class="upload-resume-btn">tomtizzy@gmail.com</button> -->
           <section class="input-add-on">
             <input class="upload-resume-btn" aria-label="Email address for the person you can send multiple resumes to, which will then upload them all to this job posting"type="text" placeholder="christinatizzy@gmail.com">
           </section>
