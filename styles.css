@@ -10,6 +10,7 @@ body {
   grid-template-columns: 210px 1fr;
   font-family: 'Open Sans', 'Font Awesome\ 5 Free', sans-serif;
   margin: auto;
+  max-width: 1440px;
 }
 
 /*SIDEBAR MENU STYLING*/
