@@ -13,9 +13,9 @@ This project was taking the static comp below, recreating the layout and making 
 
 ### Final Site
 
-## Desktop View
+**Desktop View**
 ![Screenshot of final site recreation](./images/final-site-screenshot-static-comp-2.png)
 
-## Mobile View 
+**Mobile View**
 ![Screenshot of final mobile site recreation](./images/final-site-mobile-screenshot-static-comp-2.png)
 
